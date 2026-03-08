@@ -105,30 +105,64 @@
 # print("== input recorded in input-logs.txt ==")
 
 # bai5
-file = open("question-bank.txt", "r")
-lines = file.readlines()
-file.close()
+# file = open("question-bank.txt", "r")
+# lines = file.readlines()
+# file.close()
 
-score = 0
-total = 0
+# score = 0
+# total = 0
 
-print("give the correct answers to get points.")
+# print("give the correct answers to get points.")
 
-for line in lines:
-    line = line.strip()
+# for line in lines:
+#     line = line.strip()
 
-    if line == "":
-        continue
+#     if line == "":
+#         continue
 
-    parts = line.split(",")
-    question = parts[0]
-    answer = parts[1]
+#     parts = line.split(",")
+#     question = parts[0]
+#     answer = parts[1]
 
-    user = input(question)
+#     user = input(question)
 
-    if user == answer:
-        score = score + 1
+#     if user == answer:
+#         score = score + 1
 
-    total = total + 1
+#     total = total + 1
 
-print("== you get " + str(score) + "/" + str(total) + " points ==")
+# print("== you get " + str(score) + "/" + str(total) + " points ==")
+
+
+
+# viet 1 input cho phep nguoi dung nhap 1 index bat ki vao trong file
+# hien ra input de nguoi dung nhap gia tri moi de thay the gia tri dua theo index
+
+# f = open("day10/myText.txt", "r")
+# lines = f.readlines()
+# f.close()
+
+# index = int(input("index: "))
+# new_value = input("new value: ")
+
+# lines[index] = new_value + "\n"
+
+# f = open("myText.txt", "w")
+# f.writelines(lines)
+# f.close()
+
+# print("updated")
+
+# while true lam input de nguoi dung nhap vao de them sua xoa file
+# 1. them
+# 2. sua
+# 3. xoa
+
+def create():
+    text = input("nhap dong moi: ")
+
+    f = open("day11.txt", "a")
+    f.write(text + "\n")
+    f.close()
+
+    print("them thanh cong")
